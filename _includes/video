@@ -1,0 +1,18 @@
+{% capture video_id %}{{ include.id }}{% endcapture %}
+{% capture video_provider %}{{ include.provider }}{% endcapture %}
+{% capture video_danmaku %}{{ include.danmaku | default: 0 }}{% endcapture %}
+
+{% capture video_src %}
+  {% case video_provider %}
+  {% when "youtube" %}
+    https://www.youtube-nocookie.com/embed/{{ video_id }}
+  {% endcase %}
+{% endcapture %}
+{% assign video_src = video_src | strip %}
+
+<!-- Courtesy of embedresponsively.com //-->
+{% unless video_src == "" %}
+  <div class="responsive-video-container">
+    <iframe src="{{ video_src }}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+{% endunless %}
