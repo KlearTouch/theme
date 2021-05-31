@@ -1,21 +1,26 @@
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}
-  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed" />
 {% endunless %}
 
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% if site.favicon32 %}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon32 }}" />
+{% endif %}
+{% if site.favicon128 %}
+<link rel="icon" type="image/png" sizes="128x128" href="{{ site.favicon128 }}" />
+{% endif %}
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" />
 
 <!--[if IE]>
   <style>
@@ -34,6 +39,6 @@
 
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
-    <script src="{{ script | relative_url }}"></script>
+<script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
