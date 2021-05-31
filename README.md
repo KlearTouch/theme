@@ -1,2 +1,2 @@
-# theme
-Theme for [our website](https://kleartouch.com/) (based on minimal-mistakes)
+# Theme
+Theme for [our website](https://kleartouch.com/) (based on minimal-mistakes).
