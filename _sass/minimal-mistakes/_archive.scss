@@ -142,7 +142,7 @@
   }
 
   .archive__item {
-    @include breakpoint($large) {
+    @include breakpoint($medium) {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -153,7 +153,7 @@
   }
 
   .archive__item-teaser {
-    @include breakpoint($large) {
+    @include breakpoint($medium) {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
       flex: 0 0 25%;
@@ -175,7 +175,7 @@
   }
 
   .archive__item-content {
-    @include breakpoint($large) {
+    @include breakpoint($medium) {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 75%;
       flex: 0 0 75%;
