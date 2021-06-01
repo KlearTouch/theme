@@ -21,7 +21,7 @@
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
 {%- if seo_description -%}
-  {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '
+  {%- assign seo_description = seo_description | markdownify | strip_html | strip | newline_to_br | strip_newlines | replace: '
 <br />', ' ' | escape_once | strip -%}
 {%- endif -%}
 
