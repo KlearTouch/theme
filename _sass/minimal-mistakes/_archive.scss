@@ -135,6 +135,12 @@
    Kustom view
    ========================================================================== */
 
+.results {
+  .archive__item-teaser {
+    max-width: 25%;
+  }
+}
+
 .kustom__item {
   .page__meta {
     margin: 0 0 4px;
