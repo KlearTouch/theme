@@ -10,7 +10,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: 'list' }}__item">
+<div class="{{ include.type | default: 'list' }}__item a_{{ include.type }} b_{{ (include.type == 'grid' and teaser) }} c_{{ (include.type == 'kustom') }} d_{{ ((include.type == 'grid' and teaser) or (include.type == 'kustom')) }}">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if ((include.type == "grid" and teaser) or (include.type == "kustom")) %}
       <div class="archive__item-teaser">
